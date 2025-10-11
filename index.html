@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<body>
+  <div class="bg-img">
+  </div>
+  <div class="propo">"Will You be my soul mate/entingle particle. 
+my partner in physics and in love. Together, we will creat a   beautiful world that 
+I want to run for a lifetime. Will you be my forever problem fixer and say 'yes' to being my partner in life?"</div>
+  <div class="container">
+    <div class="love-icon"><i class="fa-sharp fa-solid fa-heart"></i></div>
+    <div class="text">Hey Girl I Just Wanna Say You Something</div>
+    <div class="btn-div">
+      <div class="btn btn1">WHAT?</div>
+      <div class="btn btn2">SO?</div>
+    </div>
+  </div>
+  <div class="ans-div">
+    <a href="https://m.me/unique.dhakal.925"><div class="ans-btn yes">Yes</div></a>
+    <div class="ans-btn no">No</div>
+  </div>
+
+
+  <div class="elements el1"></div>
+  <div class="elements el2"></div>
+  <div class="elements el3"></div>
+  <div class="elements el4"></div>
+  <div class="elements el5"></div>
+  <div class="elements el6"> </div>
+  
+</body>
+<script>
+  let cont = document.querySelector(".container");
+  let bd = document.querySelector("body");
+  let textS = document.querySelector(".text");
+  let btn1 = document.querySelector(".btn1");
+  let btn2 = document.querySelector(".btn2");
+  let bgImg = document.querySelector(".bg-img");
+  let proposal = document.querySelector(".propo");
+  let noBtn = document.querySelector(".no");
+  let yesBtn = document.querySelector(".yes");
+
+
+  let bgm = new Audio("i.mp3");
+  let sfx = new Audio("beep.mp3");
+
+  btn1.addEventListener("click", event =>{
+    textS.innerHTML = "I Love You 😊";
+    btn1.style.display = "none";
+    btn2.style.display = "flex";
+    cont.style.animation = "popup 0.1s linear"
+    sfx.play();
+  })
+  btn2.addEventListener("click", event =>{
+    cont.style.display = "none";
+    // bd.style.background = "#e5dcf7";
+    proposal.style.display = "flex";
+    bgImg.style.display = "flex";
+    noBtn.style.display = "flex";
+    yesBtn.style.display = "flex";
+    sfx.play();
+    bgm.play();
+  })
+  noBtn.addEventListener("click", event =>{
+    cont.style.display = "flex";
+    cont.innerHTML = "Thank You 💔🥲💔"
+    bgm.pause();
+  })
+</script>
+
+
+
+</html>
