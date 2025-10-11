@@ -1,12 +1,16 @@
- /* Reset and base styles */
-body {
+  /*padding: 0;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
+  font-family:  sans-serif;
+  -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    -webkit-user-select
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}*/
+
+body{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,21 +19,17 @@ body {
   overflow: hidden;
   flex-direction: column;
 }
-
-/* Background image */
-.bg-img {
+.bg-img{
   display: none;
   height: 100%;
   width: 100%;
   background-image: url("R.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0 20%;
   position: absolute;
-}
-
-/* Main container */
-.container {
+}  
+.container{
   height: 250px;
   width: 300px;
   background: white;
@@ -43,26 +43,26 @@ body {
   flex-direction: column;
   animation: popup 0.1s linear;
 }
-
 @keyframes popup {
-  50% {
+  50%{
     height: 200px;
     width: 350px;
   }
 }
-
-/* Heart icon */
-.love-icon {
+.love-icon{
   position: absolute;
   font-size: 50px;
   top: -10%;
   right: -5%;
   color: #E1AEFF;
-  /* animation: dhakdhak 0.4s linear infinite; */
+/* animation: dhakdhak 0.4s linear infinite;
 }
-
-/* Text message */
-.text {
+@keyframes dhakdhak{
+  50%{
+    font-size: 55px;
+  }*/
+}
+.text{
   color: #FF78C4;
   letter-spacing: 1px;
   font-size: 18px;
@@ -71,9 +71,7 @@ body {
   text-shadow: 1px 1px 5px #E1AEFF;
   margin-top: -30px;
 }
-
-/* Answer buttons */
-.ans-div {
+.ans-div{
   width: 400px;
   display: flex;
   align-items: center;
@@ -81,21 +79,19 @@ body {
   position: absolute;
   bottom: 20%;
 }
-
-.ans-btn {
+.ans-btn{
   background: white;
   height: 40px;
   width: 80px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: #FF78C4;
   box-shadow: 0 0 10px white;
   cursor: pointer;
+  display: none;
 }
-
-/* Button container */
-.btn-div {
+.btn-div{
   height: 50px;
   bottom: 5%;
   position: absolute;
@@ -104,107 +100,92 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.btn {
+.btn{
   display: flex;
   height: 40px;
   width: 80px;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   
   cursor: pointer;
   box-shadow: 3px 3px 10px #E1AEFF;
   color: white;
-  background: #FF78C4;
+  background: #ff78c4;  
   transition: 0.3s all;
 }
-
-.btn2 {
+.btn2{
   display: none;
 }
-
-.btn:hover {
+.btn:hover{
   box-shadow: 1px 1px 5px #E1AEFF;
 }
-
-/* Proposal section */
-.propo {
+.propo{
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
   width: 100%;
-  min-height: 100vh;
-  padding: 60px 40px;
-  box-sizing: border-box;
-  background: rgba(255, 120, 196, 0.75);
-  color: white;
-  font-size: 28px;
-  line-height: 1.8;
-  letter-spacing: 2px;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  z-index: 10;
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+  letter-spacing: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  background: rgba(255, 120, 196, 0.7);
+  padding: 200px;
 }
-
-.propo p {
-  max-width: 800px;
-  margin: auto;
-  white-space: pre-line;
-}
-
-/* Floating elements */
-.elements {
+.elements{
   height: 50px;
   width: 50px;
   position: absolute;
   animation: move 5s linear infinite;
   opacity: 0.3;
 }
-
-@keyframes move {
-  50% {
-    transform: translateX(50px) translateY(50px) rotateY(360deg);
-  }
+@keyframes move{
+  50%{
+    transform: translateX(50px)translateY(50px)rotateY(360deg);
 }
-
-.el1 {
+}
+.el1{  
   background-image: url("F.jpeg");
   background-size: cover;
   background-position: center;
   left: 10%;
-  top: 5%;
   animation-delay: 0.5s;
+  top: 5%;
 }
-
-.el2 {
-  background-image: url("F.jpeg");
+.el2{  
+  background-image: url("F.jpeg")
   background-size: cover;
   background-position: center;
   top: 5%;
   animation-delay: 0.8s;
 }
-
-.el3 {
+.el3{  
   background-image: url("F.jpeg");
   background-size: cover;
   background-position: center;
   right: 10%;
-  bottom: 13%;
   animation-delay: 1.1s;
+  bottom: 13%;
 }
-
-.el4 {
+.el4{  
   background-image: url("F.jpeg");
   background-size: cover;
   background-position: center;
   left: 10%;
+  animation-delay:1s;
   bottom: 10%;
-  animation-delay: 1s;
 }
-
-.el5 {
+.el6{  
+  background-image: url("U.jpg");
+  background-size: cover;
+  background-position: center;
+  left: 50%;
+  animation-delay:26s;
+  bottom: 12%;
+}
+.el5{  
   background-image: url("F.jpeg");
   background-size: cover;
   background-position: center;
@@ -212,43 +193,33 @@ body {
   top: 10%;
   animation-delay: 1.6s;
 }
-
-.el6 {
-  background-image: url("U.jpg");
-  background-size: cover;
-  background-position: center;
-  left: 50%;
-  bottom: 12%;
-  animation-delay: 2.6s;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 800px) {
-  body {
+@media screen and (max-width: 800px){
+  body{
     min-height: 80vh;
   }
-
-  .container {
+  .container{
     height: 220px;
     width: 90%;
   }
-
-  .bg-img {
+  .bg-img{
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  .propo {
-    font-size: 18px;
-    line-height: 1.6;
-    padding: 30px 20px;
-    width: 90%;
-    letter-spacing: 1px;
-  }
-
-  .propo p {
-    max-width: 100%;
-  }
+  .propo{
+  letter-spacing: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  color: white;
+  background: rgba(255, 120, 196, 0.7);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  width: 350px;
+  line-height: 30px;
+  padding: 40px;
 }
+  }
+  
