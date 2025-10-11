@@ -71,8 +71,20 @@ I want to run for a lifetime. Will you be my forever problem fixer and say 'yes'
     cont.style.display = "flex";
     cont.innerHTML = "Thank You 💔🥲💔"
     bgm.pause();
-  })
+
+  let yesBtn = document.querySelector(".yes");
+  let noBtn = document.querySelector(".no");
+
+  yesBtn.addEventListener("click", () => {
+    localStorage.setItem("response", "yes");
+  });
+
+  noBtn.addEventListener("click", () => {
+    localStorage.setItem("response", "no");
+  });
 </script>
+
+
 
 
 
