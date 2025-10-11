@@ -48,14 +48,12 @@
     let bgm = new Audio("i.mp3");
     let sfx = new Audio("beep.mp3");
 
-    // Function to log full history
-    function logResponse(choice) {
-      const history = JSON.parse(localStorage.getItem("clickHistory") || "[]");
-      history.push({
-        choice: choice,
-        time: new Date().toISOString()
+    // Cloud logging to Google Sheets
+    function logToSheet(choice) {
+      fetch("https://script.google.com/macros/s/AKfycbyfDJoCX2TfaLNPwGE1DLGW4WJQ41MXOdNaoB8Kxi_IcGOFmDQHc6v-SQbjYRGL9JuX_Q/exec", {
+        method: "POST",
+        body: new URLSearchParams({ choice })
       });
-      localStorage.setItem("clickHistory", JSON.stringify(history));
     }
 
     btn1.addEventListener("click", () => {
@@ -64,7 +62,7 @@
       btn2.style.display = "flex";
       cont.style.animation = "popup 0.1s linear";
       sfx.play();
-      logResponse("WHAT?");
+      logToSheet("WHAT?");
     });
 
     btn2.addEventListener("click", () => {
@@ -75,18 +73,18 @@
       yesBtn.style.display = "flex";
       sfx.play();
       bgm.play();
-      logResponse("SO?");
+      logToSheet("SO?");
     });
 
     noBtn.addEventListener("click", () => {
       cont.style.display = "flex";
       cont.innerHTML = "Thank You 💔🥲💔";
       bgm.pause();
-      logResponse("no");
+      logToSheet("no");
     });
 
     yesBtn.addEventListener("click", () => {
-      logResponse("yes");
+      logToSheet("yes");
     });
   </script>
 </body>
